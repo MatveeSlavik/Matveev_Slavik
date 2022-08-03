@@ -228,8 +228,10 @@ console.log(a16);
 
 let chisloTovarov = prompt("Введите число-товаров", 0);
 function getNoun(chisloTovarov, товар, товара, товаров) {
-    let nv = chisloTovarov;
-    let last = nv.toString().slice(-1);
+    let last = chisloTovarov;
+    if (last >= 21 && last <= 100) {
+        last = last.toString().slice(-1)
+    }
     if (last >= 5 && last <= 20) {
         return товаров;
     }
